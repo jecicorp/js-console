@@ -84,6 +84,26 @@
             <groupId>${alfresco.groupId}</groupId>
             <artifactId>alfresco-repository</artifactId>
         </dependency>
+
+			  <dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-repository</artifactId>
+            <exclusions>
+                <exclusion>
+                    <!-- Dependency not found with Alfresco 5.2.g -->
+                    <groupId>org.springframework.social</groupId>
+                    <artifactId>spring-social-facebook</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <!-- Dependency not found with Alfresco 5.2.g -->
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-facebook</artifactId>
+            <version>1.0.3.RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <profiles>
